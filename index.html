@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Inputan IPK</title>
+  </head>
+  <body>
+    <h1>Masukkan Data Mata Kuliah</h1>
+    <!-- Kontainer untuk form dan tabel -->
+    <div class="container">
+      <form action="" id="formData">
+        <div>
+          <label for="nama">Nama Anda: </label><br />
+          <input type="text" id="nama" placeholder="Masukkan Nama" />
+        </div>
+        <div>
+          <label for="jmlmatkul">Jumlah Mata Kuliah: </label><br />
+          <input
+            type="number"
+            id="jmlmatkul"
+            placeholder="Masukkan jumlah mata kuliah"
+          />
+        </div>
+        <div>
+          <button type="button" onclick="ambilData()">Submit</button>
+        </div>
+      </form>
+
+      <!-- Tabel untuk hasil input -->
+      <table class="tabel-ipk" border="1">
+        <thead>
+          <tr>
+            <th>Mata Kuliah</th>
+            <th>SKS</th>
+            <th>Nilai</th>
+            <th>Nilai Mata Kuliah</th>
+          </tr>
+        </thead>
+        <tbody id="hasil"></tbody>
+      </table>
+    </div>
+    <div class="container2">
+      <div class="name">
+        <p>NAMA : <span id="namaDisplay"></span></p>
+        <p>Jumlah Mata Kuliah : <span id="jmlmatkulDisplay"></span></p>
+      </div>
+      <table class="tabel-hasil" border="1">
+        <thead>
+          <tr>
+            <th>Jumlah SKS</th>
+            <th>Total Nilai</th>
+            <th>IPK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="text-align: center">
+            <td id="jmlsks"></td>
+            <td id="jmlnilai"></td>
+            <td id="ipk"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
